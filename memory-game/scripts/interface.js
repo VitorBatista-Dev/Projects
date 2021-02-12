@@ -41,6 +41,27 @@ function flipCard (card) {		// Flip the card
 
 }
 
-function createCard () {
-	let ImagePart = document.createElement
+function createCard (content) {		// Create The card
+
+	let card = document.createElement("div")
+	let image = document.createElement("img")
+	let front_part = document.createElement("div")
+	let back_part = document.createElement("div")
+
+	image.setAttribute("src", `images/${content}.png`)
+
+	back_part.appendChild(document.createTextNode("&lt;/&gt;"))
+	front_part.appendChild(image)
+
+	card.appendChild(front_part)
+	card.appendChild(back_part)
+
+	back_part.classList.toggle("back-part")
+	front_part.classList.toggle("front-part")
+
+	card.classList.toggle("card")
+	card.classList.toggle(content)
+
+	return card
+
 }
