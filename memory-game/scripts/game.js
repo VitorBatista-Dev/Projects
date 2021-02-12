@@ -32,11 +32,25 @@ function shuffleCards (arrayImages) {
 
 	let shuffled = []
 
-	for (let a = 0;c < arrayImages.length;c++) {
-		
-		console.log(arrayImages)
-		console.log(arrayImages[c])
+	for (let c = 0;c < arrayImages.length;c++) {
+
+		while (true) {
+
+			let random = arrayImages[Math.floor(Math.random() * arrayImages.length)]
+
+			if (shuffled.indexOf(random) == -1) {
+				
+				shuffled.push(random)
+				break
+
+			}
+		}
 
 	}
+
+	//console.log(shuffled)		// Print the order of the cards
+
+	segredo123 = shuffled
+	return shuffled
 
 }
