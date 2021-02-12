@@ -78,8 +78,9 @@ body {
 }
 
 #GameOver {
+	
 	font-size: 50px;
-	font-family: Arial, Helvetica;
+	font-family: Poppins, sans-serif;
 	font-weight: 900;
 	display: none;
 	flex-direction: column;
@@ -96,6 +97,7 @@ body {
 }
 
 #GameOver button {
+
 	background-color: yellow;
 	color: black;
 	font-size: 30px;
@@ -103,4 +105,35 @@ body {
 	padding: 10px;
 	border-radius: 20px;
 	margin-top: 20px;
+
+}
+
+.controls {
+
+	margin-top: 20px;
+	text-align: center;
+}
+
+.controls button {
+
+	padding: 10px;
+	border-radius: 20px;
+	border: none;
+	font-size: 30px;
+
+}
+
+button {
+
+	font-family: Poppins, sans-serif;
+	background-color: #ff5555;
+	color: white;
+	transition: box-shadow, border-radius 500ms;
+}
+
+.controls button:hover {
+
+	box-shadow: 0 0 10px #bd93f9;
+	border-radius: 30px;
+
 }
