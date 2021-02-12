@@ -25,6 +25,7 @@ body {
 	transform-style: preserve-3d;
 }
 
+
 .flip {
 	transform: rotateY(180deg)
 }
@@ -38,8 +39,14 @@ body {
 	align-items: center;
 	position: absolute;
 	border-radius: 20px;
-	box-shadow: 5px 5px 10px black;
 	backface-visibility: hidden;
+	user-select: none;
+	transition: box-shadow 50ms;
+}
+
+.back-part:hover, .front-part:hover {
+
+	box-shadow: 0 0 20px white;
 }
 
 .back-part {
@@ -55,17 +62,22 @@ body {
 
 	background-color: #6272a4;
 	transform: rotateY(180deg);
+	
 }
 
 .board {
+
 	padding: 10px;
 	background-color: #ff5555;
+	border: 1.5px solid white;
+	border-radius: 20px;
 	display: grid;
 	grid-template: 1fr / 1fr 1fr 1fr 1fr ;
 	grid-gap: 5px;
+
 }
 
-.GameOver {
+#GameOver {
 	font-size: 50px;
 	font-family: Arial, Helvetica;
 	font-weight: 900;
@@ -83,7 +95,7 @@ body {
 
 }
 
-.GameOver button {
+#GameOver button {
 	background-color: yellow;
 	color: black;
 	font-size: 30px;
