@@ -4,7 +4,6 @@ window.onload = () => {
 
 }
 
-
 function startGame () {
 
 	drawScreen()
@@ -15,6 +14,7 @@ function startGame () {
 function addEvent () {					// Start the game by putting the click event
 
 	let board = document.getElementById("board").children
+	let countMoves = document.getElementById("count-moves")
 	let elementToCheck = []
 
 	for (let card of board) {
@@ -28,11 +28,10 @@ function addEvent () {					// Start the game by putting the click event
 
 				if (elementToCheck.length == 2) {		// Check if there is 2 cards fliped to check if both are equal
 
-					console.log(checkBoth(elementToCheck))
+					countMoves.innerHTML = parseInt(countMoves.innerHTML) + 1
 
 					if (checkBoth(elementToCheck) == false) {	// Check if both elements are equal
 
-						console.log(elementToCheck)
 
 						setTimeout(() => {			// The timer to wait the card flip, so that the function can turn both cards back
 
@@ -47,12 +46,14 @@ function addEvent () {					// Start the game by putting the click event
 							}
 
 						}, 1000)
-
 						
 					}
 
 					else {
 						elementToCheck = []
+
+						countMoves.innerHTML = parseInt(countMoves.innerHTML) + 1
+						
 					}
 				}
 			}
@@ -169,6 +170,8 @@ function ResetGame () {				// Reset The board
 
 	let board = document.getElementById("board")
 	let element = document.getElementById("GameOver")
+
+	document.getElementById("count-moves").innerHTML = 0
 
 	board.innerHTML = ""
 	element.style.display = "none"
