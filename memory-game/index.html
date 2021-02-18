@@ -7,7 +7,7 @@
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="index.css" rel="stylesheet">
+		<link href="styles/index.css" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
@@ -19,6 +19,12 @@
 
 		<div class="container">
 
+			<div class="count-move-container">
+
+				<h1>Número de movimentos:</h1>
+				<h1 class="count-moves" id="count-moves">0</h1>
+			</div>
+
 			<div id="board" class="board">
 
 
@@ -27,7 +33,10 @@
 			<div class="controls">
 				
 				<button onclick="ResetGame()">Reset Game</button>
+				<a href="pages/ranking.html">Ranking</a>
+
 			</div>
+
 
 
 			<div id="GameOver" class="GameOver">
@@ -40,6 +49,8 @@
 
 	</body>
 
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
 	<script type="text/javascript" src="scripts/game.js"></script>
 	<script type="text/javascript" src="scripts/interface.js"></script>
 </html>
