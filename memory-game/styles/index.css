@@ -127,6 +127,15 @@ body {
 	text-align: center;
 }
 
+.input-game-over {
+
+	border: none;
+	font-family: Poppins, sans-serif;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 20px;
+}
+
 .controls button , a{
 
 	padding: 10px;
