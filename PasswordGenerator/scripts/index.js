@@ -6,3 +6,14 @@ function CheckOptions(options) {
 
     return true
 }
+
+function ReturnOptionsTags() {
+
+    return {
+        size: document.getElementById('size').value,
+        numbers: document.getElementById('numbers').checked,
+        lowerCase: document.getElementById('lower-case').checked,
+        upperCase: document.getElementById('upper-case').checked,
+        symbols: document.getElementById('symbols').checked
+    }
+}
