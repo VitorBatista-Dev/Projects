@@ -17,3 +17,17 @@ function ReturnOptionsTags() {
         symbols: document.getElementById('symbols').checked
     }
 }
+
+function ExecuteGenerationOfPassword() {
+
+    let options = ReturnOptionsTags()
+
+    if (CheckOptions(options)) {
+
+        let password = GeneratePassword(options)
+        document.getElementById('input-result').value = password
+        
+    } else {
+        window.alert("Select a Option")
+    }
+}
